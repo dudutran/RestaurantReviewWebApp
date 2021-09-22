@@ -1,0 +1,27 @@
+﻿@using System.Security.Claims;
+
+<ul class="navbar-nav">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+
+            @foreach (var c in User.Claims)
+            {
+                <span class="navbar-text text-dark">Hello @c.Value!</span>
+            }
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut"><button type="button" class="btn btn-primary">Sign out</button></a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogIn"><button type="button" class="btn btn-outline-primary me-2">Sign in</button></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="CreateAnAccount"><button type="button" class="btn btn-primary">Sign-up</button></a>
+        </li>
+    }
+</ul>
+

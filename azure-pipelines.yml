@@ -1,0 +1,72 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+      - P1-time3/ReviewApp.ConsoleApp
+
+variables:
+  slnPath: P1-time3/ReviewApp.ConsoleApp
+
+stages:
+- stage: build
+  
+  jobs:
+  - job: build
+    pool:
+      vmImage: ubuntu-latest
+
+    steps:
+    - task: UseDotNet@2
+      displayName: dotnet sdk 5
+      inputs:
+        packageType: sdk
+        version: '5.x'
+    - task: UseDotNet@2
+      displayName: dotnet sdk 5
+      inputs:
+        packageType: 'runtime'
+        version: '3.1.x'
+    - task: SonarCloudPrepare@1
+      displayName: Sonar prepare
+      inputs:
+        SonarCloud: 'project1'
+        organization: '210726-wvu-net-ext'
+        scannerMode: 'MSBuild'
+        projectKey: '210726-wvu-net-ext_P1-Du-Tran'
+        projectName: 'P1-Du-Tran'
+        extraProperties: |
+          sonar.exclusions=**/lib/**/*
+          sonar.cs.opencover.reportsPaths=$(Agent.TempDirectory)/*/coverage.opencover.xml
+        
+
+    - script: dotnet build --configuration Release
+      displayName: dotnet build  
+      workingDirectory: $(slnPath)
+
+    - script: dotnet test 
+        --configuration Release 
+        --collect:"XPlat Code Coverage" 
+        --results-directory $(Agent.TempDirectory)
+        --
+        DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      displayName: dotnet test   
+      workingDirectory: $(slnPath) 
+
+    - script: dotnet publish
+        --configuration Release
+        --output $(Build.StagingDirectory)
+      displayName: dotnet publish
+      workingDirectory: $(slnPath)
+
+    - publish: $(Build.StagingDirectory)
+      displayName: publish app artifact
+      artifact: app
+    
+    

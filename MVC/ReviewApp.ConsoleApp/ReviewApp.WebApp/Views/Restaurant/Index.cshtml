@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ReviewApp.Domain.Restaurant>
+@using System.Security.Claims;
+
+@{
+    ViewData["Title"] = "View";
+}
+<style>
+
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+<h1>Restaurants</h1>
+
+<p>
+    <a asp-action="CreateARestaurant">Create New</a>
+</p>
+
+<form asp-controller="Restaurant" asp-action="ShowSearchResults">
+    <p>
+        Restaurant Name: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zipcode)
+            </th>
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Zipcode)
+                </td>
+
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    @if (User.Identity.IsAuthenticated)
+                    {@Html.ActionLink("Edit", "UpdateRestaurant", new { id = item.Id }) @Html.DisplayName(" | ")
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })}
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

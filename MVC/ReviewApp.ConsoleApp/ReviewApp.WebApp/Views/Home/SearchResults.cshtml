@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ReviewApp.Domain.Restaurant>
+
+@{
+    ViewData["Title"] = "SearchResults";
+    var error = TempData["error"] as string;
+}
+
+<h1>Search Results</h1>
+@if (ViewBag.restaurant == 0)
+{<h3 style="color:red;">@error</h3>;
+}
+<br />
+
+<div>
+
+    <h4>Restaurant</h4>
+
+    <hr />
+
+    <dl class="row">
+        @foreach (var item in Model)
+        {
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(modelItem => item.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(modelItem => item.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(modelItem => item.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(modelItem => item.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(modelItem => item.Contact)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(modelItem => item.Contact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(modelItem => item.Zipcode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(modelItem => item.Zipcode)
+        </dd>
+        }
+    </dl>
+</div>
+
+<div>
+
+    <a asp-action="Index">Back to Home</a>
+</div>
