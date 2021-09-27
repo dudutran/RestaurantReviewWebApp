@@ -1,12 +1,13 @@
-# RestaurantReviewWebApp
+<h1> RestaurantReviewWebApp</h1>
 
-Description
+<h2>Description</h2>
 The Restaurant Reviews application allows a user to provide and look up reviews for different restaurants. Users can see the basic information of a restaurant and the average rating for each restaurant from all the reviews available. They can sort the restaurants according to their average ratings and names. Users can also search a particular restaurant by its name, zip code, or state. Restaurant and review records can all be edited or deleted.
 
-Deployed Website here
+<h2>Deployed Website here</h2>
+
 https://project1reviewapp.azurewebsites.net
 
-Technologies
+<h2>Technologies</h2>
 
 C#, 
 ASP.NET MVC, 
@@ -15,8 +16,9 @@ ADO.NET Entity Framework,
 HTML, CSS, 
 Microsoft Azure, Bootstrap, DevOps
 ER Diagram(https://user-images.githubusercontent.com/77509221/134956704-5c536e15-2400-48a4-bda7-26d4291ebdc7.png)
+<img src="https://user-images.githubusercontent.com/77509221/134956704-5c536e15-2400-48a4-bda7-26d4291ebdc7.png"/>
 
-Features
+<h2>Features</h2>
 List of features ready and TODOs for future development
 
 Awesome feature 1
@@ -38,8 +40,8 @@ Usage
 Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
 
 
-License
+<h2>License</h2>
 This project uses the following license: <license_name>.
 
-Questions
+<h2>Questions<h2>
 The author of this project is Du Tran. You can reach me via email. 
