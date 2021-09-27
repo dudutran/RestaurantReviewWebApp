@@ -34,7 +34,7 @@ CSS: improving on decorating the general look of the website</li>
 Creating more functions for users to change password, and add their favourite restaurants to a list</li>
 </ul>
 <h2>License</h2>
-This project uses the following license: <license_name>.
+This project falls under Apache License 2.0.
 
 <h2>Questions</h2>
 The author of this project is Du Tran. You can reach me via email, ngocdu.tran.vn@gmail.com
