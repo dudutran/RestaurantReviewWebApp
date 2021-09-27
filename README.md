@@ -14,34 +14,26 @@ ASP.NET MVC,
 SQL Server, 
 ADO.NET Entity Framework, 
 HTML, CSS, 
-Microsoft Azure, Bootstrap, DevOps
-ER Diagram(https://user-images.githubusercontent.com/77509221/134956704-5c536e15-2400-48a4-bda7-26d4291ebdc7.png)
+Microsoft Azure, Bootstrap, DevOps,
+ER Diagram
 <img src="https://user-images.githubusercontent.com/77509221/134956704-5c536e15-2400-48a4-bda7-26d4291ebdc7.png"/>
 
 <h2>Features</h2>
 List of features ready and TODOs for future development
 
-Awesome feature 1
-Awesome feature 2
-Awesome feature 3
-To-do list:
+feature 1: create an account, log-in and log-out. As a user, they can update their own personal information as well. As an admin, they can add, delete, and update a new restaurant as well as add, delete, and update an user
+feature 2: search for a restaurant, showing details of a restaurant
+feature 3: be able to leave a review for a restaurant and add rating
 
-Wow improvement to be done 1
-Wow improvement to be done 2
-Getting Started
-(include git clone command) (include all environment setup steps)
+To-do list: (the things that I am trying to work on)
 
-Be sure to include BOTH Windows and Unix command
-Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
-All the code required to get started
-Images of what it should look like
-Usage
-Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
+Improvement 1:
+CSS: improving on decorating the general look of the website
+Improvement 2:
+Creating more functions for users to change password, and add their favourite restaurants to a list
 
 <h2>License</h2>
 This project uses the following license: <license_name>.
 
-<h2>Questions<h2>
+<h2>Questions</h2>
 The author of this project is Du Tran. You can reach me via email. 
