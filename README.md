@@ -8,16 +8,17 @@ The Restaurant Reviews application allows a user to provide and look up reviews 
 https://project1reviewapp.azurewebsites.net
 
 <h2>Technologies</h2>
-
-C#, 
-ASP.NET MVC, 
-SQL Server, 
-ADO.NET Entity Framework, 
-HTML, CSS, 
-Microsoft Azure, Bootstrap, DevOps,
-ER Diagram
+<ul>
+<li>C#</li>
+<li>ASP.NET MVC</li> 
+<li>SQL Server</li> 
+<li>ADO.NET Entity Framework</li> 
+<li>HTML+CSS</li> 
+<li>Microsoft Azure, Bootstrap, DevOps</li>
+<li>ER Diagram
 <img src="https://user-images.githubusercontent.com/77509221/134956704-5c536e15-2400-48a4-bda7-26d4291ebdc7.png"/>
-
+</li>
+</ul>
 <h2>Features</h2>
 List of features ready and TODOs for future development
 <ul>
@@ -36,4 +37,4 @@ Creating more functions for users to change password, and add their favourite re
 This project uses the following license: <license_name>.
 
 <h2>Questions</h2>
-The author of this project is Du Tran. You can reach me via email. 
+The author of this project is Du Tran. You can reach me via email, ngocdu.tran.vn@gmail.com
