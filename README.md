@@ -20,18 +20,18 @@ ER Diagram
 
 <h2>Features</h2>
 List of features ready and TODOs for future development
-
-feature 1: create an account, log-in and log-out. As a user, they can update their own personal information as well. As an admin, they can add, delete, and update a new restaurant as well as add, delete, and update an user
-feature 2: search for a restaurant, showing details of a restaurant
-feature 3: be able to leave a review for a restaurant and add rating
-
+<ul>
+<li>feature 1: create an account, log-in and log-out. As a user, they can update their own personal information as well. As an admin, they can add, delete, and update a new restaurant as well as add, delete, and update an user</li>
+<li>feature 2: search for a restaurant, showing details of a restaurant</li>
+<li>feature 3: be able to leave a review for a restaurant and add rating</li>
+</ul>
 To-do list: (the things that I am trying to work on)
-
-Improvement 1:
-CSS: improving on decorating the general look of the website
-Improvement 2:
-Creating more functions for users to change password, and add their favourite restaurants to a list
-
+<ul>
+<li>Improvement 1:
+CSS: improving on decorating the general look of the website</li>
+<li>Improvement 2:
+Creating more functions for users to change password, and add their favourite restaurants to a list</li>
+</ul>
 <h2>License</h2>
 This project uses the following license: <license_name>.
 
